@@ -1,4 +1,7 @@
+from cal_time import *
+
 # 线性查找
+@cal_time
 def linear_search(list, value):
     for index, val in enumerate(list):
         if val == value:
@@ -8,6 +11,7 @@ def linear_search(list, value):
 
 
 # 二分查找
+@cal_time
 def binary_search(list, value):
     left = 0
     right = len(list) - 1
@@ -22,7 +26,10 @@ def binary_search(list, value):
     else:
         return None
 
+li = list(range(10000))
+print(linear_search(li, 3890))
+print(binary_search(li, 3890))
 
-if __name__ == '__main__':
-    li = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-    print(binary_search(li, 3))
+# if __name__ == '__main__':
+#     li = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+#     print(binary_search(li, 3))
