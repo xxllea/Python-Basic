@@ -1,4 +1,4 @@
-
+# 汉诺塔问题
 index = 1
 
 def hanoi(n, A, B, C):
