@@ -35,10 +35,10 @@ def rename_file(dir_path):
             # 将"2092_contract_30.jpg" ——————> "2092.jpg"形式的数据
             # new_name = re.sub(string, "", file_name)
             # 或者
-            new_name = file_name.replace(string, "")
+            # new_name = file_name.replace(string, "")
 
             # 将"2092.jpg" ——————> "2092_contract_30.jpg"形式的数据
-            # new_name = file_name.replace(".jpg", "") + string + ".jpg"
+            new_name = file_name.replace(".jpg", "") + string + ".jpg"
 
             new_file_name = os.path.join(file_path, new_name)
             os.rename(old_file_name, new_file_name)
